@@ -1,0 +1,18 @@
+import { initializeApp } from 'firebase/app';
+import { getAuth, GoogleAuthProvider, signInWithPopup, signOut, onAuthStateChanged } from 'firebase/auth';
+
+const firebaseConfig = {
+    apiKey: "AIzaSyCTc9p6DNnYr_LlzLQxRcdefs8I-yr9Xk4",
+    authDomain: "sustainagrow-2b681.firebaseapp.com",
+    projectId: "sustainagrow-2b681",
+    storageBucket: "sustainagrow-2b681.firebasestorage.app",
+    messagingSenderId: "222397730953",
+    appId: "1:222397730953:web:d81a26013cc74d047a7658",
+    measurementId: "G-FWSDR2NDEK"
+};
+
+const app = initializeApp(firebaseConfig);
+const auth = getAuth(app);
+const provider = new GoogleAuthProvider();
+
+export { auth, provider, signInWithPopup, signOut, onAuthStateChanged };
